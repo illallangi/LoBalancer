@@ -25,12 +25,14 @@ ndb = NDB()
         default=5)
 @option('--port',
         type=INT,
+        envvar='PORT',
         required=True)
 @option('--ip',
         type=STRING,
         default='127.0.0.1')
 @option('--vip',
         type=STRING,
+        envvar='ADDRESS',
         required=True)
 def LoBalancer(log_level,
                sleep_time,
